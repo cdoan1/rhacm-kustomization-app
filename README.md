@@ -6,8 +6,6 @@ The app consists of both the operator and the instance.
 * When combined, install runs very nice. However, when we go to uninstall,
   there are chances that the sub-component helm charts do not get uninstall properly. Most likely this is a timing issue, and the `- uninstall-helm-release` are not enough to block to cleanup of multiclusterhub or the csv.
 
-[rhacm with argocd](images/rhacm-argocd.png "rhacm with argocd")
-
 # Usage
 
 After you connect to an argo-cd context, create an app, via the cli:
@@ -30,3 +28,7 @@ argocd app create \
 --dest-namespace ${DEST_NS} \
 --sync-policy automated
 ```
+
+# Example
+
+![rhacm with argocd](images/rhacm-argocd.png "rhacm with argocd")
